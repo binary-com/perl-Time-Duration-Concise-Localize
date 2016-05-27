@@ -8,7 +8,7 @@ WriteMakefile(
     AUTHOR           => q{Binary.com <perl@binary.com>},
     VERSION_FROM     => 'lib/Time/Duration/Concise/Localize.pm',
     ABSTRACT_FROM    => 'lib/Time/Duration/Concise/Localize.pm',
-    LICENSE          => 'Artistic_2_0',
+    LICENSE          => 'artistic_2',
     PL_FILES         => {},
     MIN_PERL_VERSION => 5.006,
     CONFIGURE_REQUIRES => {
