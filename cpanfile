@@ -2,7 +2,7 @@ requires 'Carp';
 requires 'Module::Pluggable';
 requires 'POSIX';
 requires 'Tie::Hash::LRU';
-requires 'Time::Seconds', '1.27';
+requires 'Time::Seconds', '1.32';
 requires 'perl', '5.006';
 
 on configure => sub {

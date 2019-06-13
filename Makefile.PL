@@ -21,7 +21,7 @@ my %WriteMakefileArgs = (
     "Module::Pluggable" => 0,
     "POSIX" => 0,
     "Tie::Hash::LRU" => 0,
-    "Time::Seconds" => "1.27"
+    "Time::Seconds" => "1.32"
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
@@ -55,7 +55,7 @@ my %FallbackPrereqs = (
   "Test::More" => "0.94",
   "Test::NoWarnings" => 0,
   "Tie::Hash::LRU" => 0,
-  "Time::Seconds" => "1.27"
+  "Time::Seconds" => "1.32"
 );
 
 
