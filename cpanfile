@@ -14,4 +14,5 @@ on test => sub {
     requires 'Test::FailWarnings';
     requires 'Test::More', '0.84';
     requires 'Test::NoWarnings';
+    requires 'Test::CheckDeps';
 };
