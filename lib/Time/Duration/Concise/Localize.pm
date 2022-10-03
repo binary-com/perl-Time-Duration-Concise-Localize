@@ -12,7 +12,7 @@ use Module::Pluggable
   sub_name    => 'translation_classes',
   require     => 1;
 
-our $VERSION = '2.62';
+our $VERSION = '2.63';
 
 =head1 NAME
 
