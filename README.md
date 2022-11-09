@@ -1,25 +1,12 @@
-**Time-Duration-Concise-Localize**
+# NAME
 
-Time::Duration::Concise::Localize is an another time utility, which converts your concise time string to time duration and it also localize it in your language.
+Time::Duration::Concise::Localize - localize concise time duration string representation.
 
-This module uses Time::Duration::Concise as base module to convert concise string to duration
+# DESCRIPTION
 
+Time::Duration::Concise provides localize concise time duration string representation.
 
-[![Build Status](https://travis-ci.org/binary-com/perl-Time-Duration-Concise-Localize.svg?branch=master)](https://travis-ci.org/binary-com/perl-Time-Duration-Concise-Localize)
-[![codecov](https://codecov.io/gh/binary-com/perl-Time-Duration-Concise-Localize/branch/master/graph/badge.svg)](https://codecov.io/gh/binary-com/perl-Time-Duration-Concise-Localize)
-[![Gitter chat](https://badges.gitter.im/binary-com/perl-Time-Duration-Concise-Localize.png)](https://gitter.im/binary-com/perl-Time-Duration-Concise-Localize)
-
-NOTE
-
-Our concise time interval can also have decimal values
-
-example:
-
-    1.5h
-    1d3.5h10s
-
-
-SYNOPSIS
+# SYNOPSIS
 
     use Time::Duration::Concise::Localize;
 
@@ -28,111 +15,62 @@ SYNOPSIS
         # concise time interval
         'interval' => '1.5h',
 
-        # Local in which string will be translated
-        'locale' => 'hi',
-
+        # Locale for translation
+        'locale' => 'en'
     );
 
-    # gets you localized time duration string
     $duration->as_string;
 
-    # In Arabic
-    $duration->locale('ar');
-    $duration->as_string();
+# FIELDS
 
-    # In Chinese - China
-    $duration->locale('zh_cn');
-    $duration->as_string();
+## interval (REQUIRED)
 
-    ...
+concise interval string
 
-CONCISE FORMAT
+## locale
 
-The format is an integer followed immediatley by its duration identifier.  White-space will be ignored.
-    
-  The following table explains the format.
+Get and set the locale for translation
 
-    | identifier | duration |
-    |------------|----------|
-    | d          | day      |
-    | h          | hour     |
-    | m          | minute   |
-    | s          | second   |
-    
+# METHODS
 
+## as\_string
 
-INSTALLATION
+Localized duration string
 
-To install this module, run the following commands:
+## new
 
-	perl Makefile.PL
-	make
-	make test
-	make install
+Object constructor
 
-SUPPORT AND DOCUMENTATION
+# AUTHOR
 
-After installing, you can find documentation for this module with the
-perldoc command.
+Binary.com, `<perl at binary.com>`
+
+# BUGS
+
+Please report any bugs or feature requests to `bug-time-duration-concise-localize at rt.cpan.org`, or through
+the web interface at [http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Time-Duration-Concise-Localize](http://rt.cpan.org/NoAuth/ReportBug.html?Queue=Time-Duration-Concise-Localize).  I will be notified, and then you'll
+automatically be notified of progress on your bug as I make changes.
+
+# SUPPORT
+
+You can find documentation for this module with the perldoc command.
 
     perldoc Time::Duration::Concise::Localize
-    perldoc Time::Duration::Concise
 
 You can also look for information at:
 
-    RT, CPAN's request tracker (report bugs here)
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=Time-Duration-Concise-Localize
+- RT: CPAN's request tracker (report bugs here)
 
-    AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/Time-Duration-Concise-Localize
-        http://annocpan.org/dist/Time-Duration-Concise
+    [http://rt.cpan.org/NoAuth/Bugs.html?Dist=Time-Duration-Concise-Localize](http://rt.cpan.org/NoAuth/Bugs.html?Dist=Time-Duration-Concise-Localize)
 
-    CPAN Ratings
-        http://cpanratings.perl.org/d/Time-Duration-Concise-Localize
-        http://cpanratings.perl.org/dist/Time-Duration-Concise
+- AnnoCPAN: Annotated CPAN documentation
 
-    Search CPAN
-        http://search.cpan.org/dist/Time-Duration-Concise-Localize/
-        http://search.cpan.org/dist/Time-Duration-Concise
+    [http://annocpan.org/dist/Time-Duration-Concise-Localize](http://annocpan.org/dist/Time-Duration-Concise-Localize)
 
+- CPAN Ratings
 
-LICENSE AND COPYRIGHT
+    [http://cpanratings.perl.org/d/Time-Duration-Concise-Localize](http://cpanratings.perl.org/d/Time-Duration-Concise-Localize)
 
-Copyright (C) 2014 Binary.com
+- Search CPAN
 
-This program is free software; you can redistribute it and/or modify it
-under the terms of the the Artistic License (2.0). You may obtain a
-copy of the full license at:
-
-L<http://www.perlfoundation.org/artistic_license_2_0>
-
-Any use, modification, and distribution of the Standard or Modified
-Versions is governed by this Artistic License. By using, modifying or
-distributing the Package, you accept this license. Do not use, modify,
-or distribute the Package, if you do not accept this license.
-
-If your Modified Version has been derived from a Modified Version made
-by someone other than you, you are nevertheless required to ensure that
-your Modified Version complies with the requirements of this license.
-
-This license does not grant you the right to use any trademark, service
-mark, tradename, or logo of the Copyright Holder.
-
-This license includes the non-exclusive, worldwide, free-of-charge
-patent license to make, have made, use, offer to sell, sell, import and
-otherwise transfer the Package with respect to any patent claims
-licensable by the Copyright Holder that are necessarily infringed by the
-Package. If you institute patent litigation (including a cross-claim or
-counterclaim) against any party alleging that the Package constitutes
-direct or contributory patent infringement, then this Artistic License
-to you shall terminate on the date that such litigation is filed.
-
-Disclaimer of Warranty: THE PACKAGE IS PROVIDED BY THE COPYRIGHT HOLDER
-AND CONTRIBUTORS "AS IS' AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES.
-THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR
-PURPOSE, OR NON-INFRINGEMENT ARE DISCLAIMED TO THE EXTENT PERMITTED BY
-YOUR LOCAL LAW. UNLESS REQUIRED BY LAW, NO COPYRIGHT HOLDER OR
-CONTRIBUTOR WILL BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, OR
-CONSEQUENTIAL DAMAGES ARISING IN ANY WAY OUT OF THE USE OF THE PACKAGE,
-EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
+    [http://search.cpan.org/dist/Time-Duration-Concise-Localize/](http://search.cpan.org/dist/Time-Duration-Concise-Localize/)
