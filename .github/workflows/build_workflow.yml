@@ -1,6 +1,7 @@
 name: Build workflow
 run-name: Build workflow
 on:
+  workflow_dispatch:
   push:
     branches:
     - master
@@ -36,7 +37,6 @@ jobs:
         dzil listdeps --author --missing --cpanm-versions | xargs cpanm -n
     - name: Run Tests
       run: dzil smoke --release --author && dzil cover -test -report codecov && dzil xtest
-  
   release:
     if: github.ref == 'refs/heads/master'
     needs: test
